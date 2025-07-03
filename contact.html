@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь | RockPedia</title>
+    <!-- Подключение Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Подключение иконок Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Подключение пользовательских стилей -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/Logo.jpg" type="image/png">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between">
+                <div class="d-flex align-items-center mb-3 mb-md-0">
+                    <img src="assets/images/Logo.jpg" alt="Логотип RockPedia" class="logo me-2" style="width: 60px; height: 60px;">
+                    <h1 class="h4 mb-0">Pedia - энциклопедия рок-групп мира</h1>
+                </div>
+                
+                <nav class="navbar navbar-expand-md">
+                    <div class="container-fluid p-0">
+                        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item mx-1">
+                                    <a class="nav-link text-white fs-5" href="index.html">Главная</a>
+                                </li>
+                                <li class="nav-item mx-1">
+                                    <a class="nav-link text-white fs-5" href="catalog.html">Каталог групп</a>
+                                </li>
+                                <li class="nav-item mx-1">
+                                    <a class="nav-link text-white active fs-5" href="contact.html">Написать нам</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="text-center mb-4"><i class="bi bi-envelope"></i> Написать нам</h1>
+                <p class="lead text-center mb-4 fw-bold">Есть идея? Нашли ошибку? Пишите нам, заполнив форму ниже</p>
+                
+                <!-- Форма обратной связи -->
+                <form id="contactForm" class="bg-light p-4 rounded">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email для обратной связи*</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ваш email" required>
+                        <div class="invalid-feedback">Пожалуйста, введите корректный email</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Телефон для связи</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="+7 (XXX) XXX-XX-XX">
+                        <div class="invalid-feedback">Пожалуйста, введите корректный телефон</div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение*</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Ваше сообщение (не менее 10 символов)" required></textarea>
+                        <div class="invalid-feedback">Сообщение должно содержать не менее 10 символов</div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="file" class="form-label">Прикрепите файл (необязательно)</label>
+                        <input type="file" class="form-control" id="file">
+                        <div class="form-text mt-1" id="fileStatus">Файл не выбран</div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-danger btn-lg">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Футер сайта -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <h5>О проекте</h5>
+                    <p>RockPedia - энциклопедия рок-групп мира. Здесь вы найдете информацию о легендарных и современных рок-коллективах, их истории, альбомах и участниках.</p>
+                </div>
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Контакты</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope me-2"></i> krotov@gmail.com</li>
+                        <li><i class="bi bi-telephone me-2"></i> +7 (937) 123-65-67</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Меню</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Главная</a></li>
+                        <li><a href="catalog.html" class="text-white">Каталог групп</a></li>
+                        <li><a href="contact.html" class="text-white">Написать нам</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">Сайт разработан студентом группы ИС-3-23 Кротовым А.А. © 2025. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal fade" id="messageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Заголовок</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    Сообщение
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключение скриптов -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
